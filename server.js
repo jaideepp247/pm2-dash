@@ -14,7 +14,7 @@ const server = http.createServer(app);
 const wss = new WebSocket.Server({ server });
 
 const PORT = process.env.PORT || 3099;
-const LOG_LINES = 200;
+const LOG_LINES = 1000;
 const SESSION_TTL = parseInt(process.env.SESSION_TTL_HOURS || '24', 10) * 3600_000;
 const USERS_FILE  = path.resolve(__dirname, 'users.json');
 
